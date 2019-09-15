@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="665.0" prefWidth="1210.0" style="-fx-background-color: black; -fx-background-image: url(&quot;/siscon/image/logo.png&quot;);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.PdvMetroController">
+   <children>
+      <AnchorPane layoutX="460.0" layoutY="-1.0" prefHeight="622.0" prefWidth="766.0" style="-fx-background-color: black;" AnchorPane.bottomAnchor="1.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="-1.0">
+         <children>
+            <Pane layoutX="450.0" layoutY="158.0" prefHeight="97.0" prefWidth="160.0" style="-fx-background-color: #2b5797;">
+               <children>
+                  <TextField fx:id="jtfValorUnitario" alignment="CENTER_RIGHT" layoutY="21.0" prefHeight="60.0" prefWidth="134.0" style="-fx-background-color: #2b5797; -fx-text-fill: white;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="7.0" layoutY="5.0" text="Unitário(R$)" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="615.0" layoutY="158.0" prefHeight="97.0" prefWidth="142.0" style="-fx-background-color: #da532c;">
+               <children>
+                  <Label layoutX="7.0" layoutY="5.0" text="Quantidade" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="jtfQuantidade" alignment="CENTER_RIGHT" layoutX="1.0" layoutY="25.0" prefHeight="54.0" prefWidth="121.0" style="-fx-background-color: da532c; -fx-text-fill: white;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="450.0" layoutY="417.0" prefHeight="128.0" prefWidth="307.0" style="-fx-background-color: #ee1111;">
+               <children>
+                  <Label layoutX="8.0" layoutY="7.0" text="Subtotal" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="jtfValorSubTotal" alignment="CENTER" layoutY="50.0" prefHeight="68.0" prefWidth="286.0" style="-fx-background-color: ee1111; -fx-text-fill: white;">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <ListView layoutX="11.0" layoutY="158.0" prefHeight="386.0" prefWidth="433.0" />
+            <Label layoutX="25.0" layoutY="167.0" text="Itens">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Pane layoutX="450.0" layoutY="259.0" prefHeight="153.0" prefWidth="307.0" style="-fx-background-color: #00a300;">
+               <children>
+                  <Label layoutX="8.0" layoutY="7.0" text="Total" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="jtfValorTotal" alignment="CENTER" layoutY="50.0" prefHeight="68.0" prefWidth="286.0" style="-fx-background-color: #00a300; -fx-text-fill: white;">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Label layoutX="153.0" layoutY="14.0" text="SISTEMA CONTROLE DE ESTOQUE - PDV" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Pane layoutX="10.0" layoutY="553.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="90.0" prefWidth="745.0" style="-fx-background-color: #CCD6DD;" AnchorPane.bottomAnchor="29.0">
+               <children>
+                  <Label fx:id="lblStatus" alignment="CENTER" layoutX="233.0" layoutY="23.0" text="CAIXA LIVRE">
+                     <font>
+                        <Font name="System Bold" size="36.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="10.0" layoutY="76.0" prefHeight="74.0" prefWidth="745.0" style="-fx-background-color: #1E7145;">
+               <children>
+                  <Label layoutX="6.0" layoutY="7.0" text="Descrição" textFill="#f2f2f2">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="jtfDescricao" layoutX="6.0" layoutY="26.0" prefHeight="45.0" prefWidth="718.0" style="-fx-background-color: #1E7145; -fx-text-fill: white;">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </Pane>
+            <Pane layoutX="11.0" layoutY="636.0" prefHeight="29.0" prefWidth="745.0" style="-fx-background-color: #221F1F;" AnchorPane.bottomAnchor="0.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="10.0" text="CAIXA - 01" textFill="WHITE" />
+                  <Label fx:id="lblOperador" layoutX="210.0" layoutY="10.0" text="1-OPERADOR" textFill="WHITE" />
+                  <Label fx:id="lblDataHora" alignment="CENTER_RIGHT" layoutX="562.0" layoutY="10.0" text="dd/MM/yyy HH:mm:ss" textFill="WHITE" />
+                  <Label layoutX="430.0" layoutY="10.0" text="Hora de Acesso:" textFill="WHITE" />
+                  <Label layoutX="111.0" layoutY="10.0" text="OPERADOR:" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+      <Pane nodeOrientation="LEFT_TO_RIGHT" prefHeight="622.0" prefWidth="439.0" style="-fx-background-image: url(&quot;/siscon/image/logo.png&quot;); -fx-background-color: blue;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="771.0" AnchorPane.topAnchor="0.0" />
+      <MenuBar layoutX="10.0" layoutY="10.0" prefHeight="29.0" prefWidth="245.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Arquivo">
+               <items>
+                  <MenuItem fx:id="jmiSair" mnemonicParsing="false" onAction="#handleSair" text="Sair">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F9" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Comandos">
+               <items>
+                  <MenuItem fx:id="jmiExcluirProduto" mnemonicParsing="false" text="Excluir Produto">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F2" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiAlterarQuantidade" mnemonicParsing="false" text="Alterar Quantidade">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F3" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiFinalizarVenda" mnemonicParsing="false" text="Finalizar Venda">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F4" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiPesquisarPoduto" mnemonicParsing="false" text="Pesquisar Produto">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F5" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiInserirProduto" mnemonicParsing="false" text="Inserir Produto">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F6" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiCancelar" mnemonicParsing="false" text="Cancelar">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F7" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem fx:id="jmiFecharCaixa" mnemonicParsing="false" onAction="#handlePausarPdv" text="Fechar Caixa">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F8" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ajuda">
+               <items>
+                  <MenuItem fx:id="jmiSobre" mnemonicParsing="false" text="Sobre" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="408.0" prefWidth="1111.0" style="-fx-background-color: rgb(55,54,64);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.PrincipalController">
+   <children>
+      <MenuBar prefHeight="30.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Arquivo">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="Salvar">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+              <MenuItem fx:id="sairMenu" mnemonicParsing="false" onAction="#handleSair" text="Sair">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F7" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem fx:id="jmiCliente" mnemonicParsing="false" onAction="#handleCliente" text="Cliente">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="D" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <MenuItem fx:id="jmiUsuario" mnemonicParsing="false" onAction="#handleUsuario" text="Usuario" />
+                  <MenuItem fx:id="jmiFornecedor" mnemonicParsing="false" onAction="#handleFornecedor" text="Fornecedor" />
+                  <MenuItem fx:id="jmiProduto" mnemonicParsing="false" onAction="#handleProduto" text="Produtos" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Consultar">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleExibirDados" text="Exibir Dados" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Ferramentas">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Action 1" />
+              </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+      <Pane prefHeight="52.0" prefWidth="1111.0" style="-fx-background-color: rgb(153, 255, 204);" AnchorPane.bottomAnchor="292.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label fx:id="lblUsuario" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="11.0" prefHeight="30.0" prefWidth="178.0" style="-fx-background-image: url(&quot;/siscon/image/user.png&quot;); -fx-background-repeat: no-repeat;" text="\\$Usuário">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Separator layoutX="236.0" layoutY="1.0" orientation="VERTICAL" prefHeight="47.0" prefWidth="4.0" />
+            <Button alignment="CENTER_RIGHT" layoutX="258.0" layoutY="12.0" mnemonicParsing="false" onAction="#handleCliente" prefHeight="32.0" prefWidth="103.0" style="-fx-background-image: url(&quot;/siscon/image/usuario.png&quot;); -fx-background-repeat: no-repeat;" text="Clientes">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="372.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleFornecedor" prefHeight="32.0" prefWidth="141.0" style="-fx-background-image: url(&quot;/siscon/image/fornecedor.png&quot;); -fx-background-repeat: no-repeat;" text="Fornecedores">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="527.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleProduto" prefHeight="32.0" prefWidth="110.0" style="-fx-background-image: url(&quot;/siscon/image/produto.png&quot;); -fx-background-repeat: no-repeat;" text="Produtos">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="657.0" layoutY="13.0" mnemonicParsing="false" onAction="#handleExibirDados" prefHeight="32.0" prefWidth="155.0" style="-fx-background-image: url(&quot;/siscon/image/registro.png&quot;); -fx-background-repeat: no-repeat;" text="Todos os Dados">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="823.0" layoutY="13.0" mnemonicParsing="false" onAction="#handlePdv" prefHeight="32.0" prefWidth="91.0" style="-fx-background-image: url(&quot;/siscon/image/pdv.png&quot;); -fx-background-repeat: no-repeat;" text="PDV">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button alignment="CENTER_RIGHT" layoutX="920.0" layoutY="13.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="129.0" style="-fx-background-image: url(&quot;/siscon/image/relatorio.png&quot;); -fx-background-repeat: no-repeat;" text="Relatórios">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <AnchorPane fx:id="anchorPane" prefHeight="334.0" prefWidth="600.0" />
+   </children>
+</VBox>

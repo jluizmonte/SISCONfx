@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="369.0" prefWidth="954.0" style="-fx-background-color: rgb(66,166,161);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.ProdutoController">
+   <children>
+      <Pane layoutX="419.0" prefHeight="369.0" prefWidth="549.0" style="-fx-background-color: rgb(66,166,161);">
+         <children>
+            <Label layoutX="14.0" layoutY="20.0" text="Descrição Produto:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="377.0" layoutY="20.0" text="Código de Barras:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+               <tooltip>
+                  <Tooltip text="Código de barras único para o produto">
+                     <font>
+                        <Font name="Tahoma" size="14.0" />
+                     </font>
+                  </Tooltip>
+               </tooltip>
+            </Label>
+            <Label layoutX="14.0" layoutY="171.0" text="Observações Gerais:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="144.0" layoutY="91.0" text="Quantidade:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="91.0" text="Valor Unitário:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="268.0" layoutY="91.0" text="Valor Total:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="382.0" layoutY="91.0" text="Data Entrada:">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="jtfDescricaoProduto" layoutX="14.0" layoutY="50.0" prefHeight="28.0" prefWidth="359.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="jtfCodigoBarras" layoutX="380.0" layoutY="50.0" prefHeight="28.0" prefWidth="127.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="jtfValorUnitario" layoutX="14.0" layoutY="118.0" prefHeight="25.0" prefWidth="115.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="jtfQuantidadeProduto" layoutX="146.0" layoutY="118.0" prefHeight="28.0" prefWidth="102.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="jtfValorTotal" layoutX="268.0" layoutY="118.0" prefHeight="28.0" prefWidth="95.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextField>
+            <TextArea fx:id="jtfObservacao" layoutX="14.0" layoutY="197.0" prefHeight="95.0" prefWidth="523.0">
+               <font>
+                  <Font name="Tahoma" size="14.0" />
+               </font>
+            </TextArea>
+            <DatePicker fx:id="dpDataEntrada" layoutX="377.0" layoutY="120.0" prefHeight="25.0" prefWidth="127.0" />
+            <Button fx:id="btnCancelar" layoutX="444.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="32.0" prefWidth="95.0" text="Cancelar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNovo" layoutX="9.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleNovo" prefHeight="32.0" prefWidth="78.0" text="Novo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSalvar" layoutX="363.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleSalvarProduto" prefHeight="32.0" prefWidth="78.0" text="Salvar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="277.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleExcluirProduto" prefHeight="32.0" prefWidth="78.0" text="Excluir">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAlterar" layoutX="90.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleAlterarProduto" prefHeight="32.0" prefWidth="78.0" text="Alterar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnConsulta" layoutX="172.0" layoutY="312.0" mnemonicParsing="false" onAction="#handleExibirDadosProduto" prefHeight="32.0" prefWidth="102.0" text="Consultar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <TableView fx:id="jtProduto" prefHeight="369.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="colunaDescricao" prefWidth="195.0" text="Descrição" />
+          <TableColumn fx:id="colunaQuantidade" prefWidth="45.0" text="Qtde" />
+            <TableColumn fx:id="colunaValorTotal" prefWidth="73.0" text="Valor" />
+            <TableColumn fx:id="colunaDataEntrada" prefWidth="103.0" text="Data Entrada" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

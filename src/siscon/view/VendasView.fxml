@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="528.0" prefWidth="815.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TabPane prefHeight="528.0" prefWidth="698.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Cadastro">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="440.0" prefWidth="634.0" style="-fx-background-color: rgb(66,166,161);">
+                     <children>
+                        <Label layoutX="14.0" layoutY="14.0" text="Cliente:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="14.0" text="N° Venda:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="14.0" layoutY="90.0" text="Produto:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="286.0" layoutY="90.0" text="Quantidade:">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Button alignment="CENTER_RIGHT" layoutX="442.0" layoutY="123.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="122.0" style="-fx-background-image: url(&quot;/siscon/image/novo.png&quot;); -fx-background-repeat: no-repeat;" text="Adicionar">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField editable="false" layoutX="286.0" layoutY="45.0" prefHeight="32.0" prefWidth="133.0" style="-fx-background-color: rgb(208,240,214);" />
+                        <TextField layoutX="286.0" layoutY="123.0" prefHeight="32.0" prefWidth="134.0" />
+                        <ComboBox layoutX="14.0" layoutY="45.0" prefHeight="32.0" prefWidth="253.0" />
+                        <ComboBox layoutX="13.0" layoutY="123.0" prefHeight="32.0" prefWidth="253.0" />
+                        <TableView layoutY="174.0" prefHeight="268.0" prefWidth="634.0">
+                          <columns>
+                            <TableColumn prefWidth="100.0" text="Codigo" />
+                            <TableColumn prefWidth="228.0" text="Produto" />
+                              <TableColumn prefWidth="98.0" text="Quantidade" />
+                              <TableColumn prefWidth="100.0" text="Unitário(R$)" />
+                              <TableColumn prefWidth="107.0" text="Total(R$)" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Consultar/Alterar/Excluir">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

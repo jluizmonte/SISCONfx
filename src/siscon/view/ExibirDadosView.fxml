@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="430.0" prefWidth="990.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.ExibirDadosController">
+   <children>
+      <TabPane prefHeight="430.0" prefWidth="990.0" side="LEFT" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Clientes">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="994.0" style="-fx-background-color: rgb(208,240,214);" />
+            </content>
+          </Tab>
+          <Tab text="Fornecedores">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="430.0" prefWidth="962.0">
+                     <children>
+                        <TableView fx:id="jtFornecedor" prefHeight="430.0" prefWidth="961.0" style="-fx-background-color: rgb(208,240,214);">
+                          <columns>
+                            <TableColumn fx:id="colunaNomeFornecedor" prefWidth="75.0" text="Nome" />
+                            <TableColumn fx:id="colunaRuaFornecedor" prefWidth="117.0" text="Rua" />
+                              <TableColumn fx:id="colunaNumeroFornecedor" prefWidth="33.0" text="N°" />
+                              <TableColumn fx:id="colunaBairroFornecedor" prefWidth="75.0" text="Bairro" />
+                              <TableColumn fx:id="colunaCidadeFornecedor" prefWidth="75.0" text="Cidade" />
+                              <TableColumn fx:id="colunaEstadoFornecedor" prefWidth="96.0" text="Estado" />
+                              <TableColumn fx:id="colunaCepFornecedor" text="CEP" />
+                              <TableColumn fx:id="colunaTelefoneFornecedor" prefWidth="104.0" text="Telefone" />
+                              <TableColumn fx:id="colunaCelularFornecedor" prefWidth="113.0" text="Celular" />
+                              <TableColumn fx:id="colunaEmailFornecedor" prefWidth="188.0" text="E-mail" />
+                          </columns>
+                        </TableView>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+            <Tab text="Produtos">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="jtProduto" prefHeight="430.0" prefWidth="962.0" style="-fx-background-color: rgb(208,240,214);">
+                           <columns>
+                              <TableColumn fx:id="colunaCodigo" prefWidth="123.0" text="Código" />
+                              <TableColumn fx:id="colunaDescricao" prefWidth="233.0" text="Descrição Produto" />
+                              <TableColumn fx:id="colunaQuantidade" prefWidth="47.0" text="Qtde" />
+                              <TableColumn fx:id="colunaValorUnitario" prefWidth="97.0" text="Unitário(R$)" />
+                              <TableColumn fx:id="colunaValorTotal" prefWidth="75.0" text="Total(R$)" />
+                              <TableColumn fx:id="colunaDataEntrada" prefWidth="102.0" text="Entrada" />
+                              <TableColumn fx:id="colunaObservacoes" prefWidth="277.0" text="Observações" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

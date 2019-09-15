@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="880.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.FornecedorController">
+   <children>
+      <TableView fx:id="jtFornecedor" prefHeight="426.0" prefWidth="327.0">
+        <columns>
+          <TableColumn fx:id="colunaNome" prefWidth="173.0" text="Nome" />
+          <TableColumn fx:id="colunaTelefone" prefWidth="177.0" text="Telefone" />
+        </columns>
+      </TableView>
+      <Pane layoutX="327.0" prefHeight="426.0" prefWidth="554.0" style="-fx-background-color: rgb(66,166,161);">
+         <children>
+            <Button fx:id="btnConsulta" layoutX="175.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleExibirDadosFornecedor" prefHeight="32.0" prefWidth="105.0" text="Consultar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnAlterar" layoutX="94.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleAlterarFornecedor" prefHeight="32.0" prefWidth="78.0" text="Alterar">
+               <font>
+                  <Font name="Tahoma" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnExcluir" layoutX="282.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleExcluirFornecedor" prefHeight="32.0" prefWidth="78.0" text="Excluir">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Label layoutX="17.0" layoutY="14.0" style="-fx-font-size: 15pt; -fx-font-family: Tahoma;" text="Nome do Fornecedor:" />
+            <Label layoutX="17.0" layoutY="77.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Rua:" />
+            <Label layoutX="379.0" layoutY="77.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="N°:" />
+            <Label layoutX="15.0" layoutY="137.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Bairro:" />
+            <Label layoutX="321.0" layoutY="137.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Cidade:" />
+            <Label layoutX="18.0" layoutY="206.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Estado:" />
+            <Label layoutX="183.0" layoutY="206.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="CEP:" />
+            <Label layoutX="332.0" layoutY="206.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Telefone:" />
+            <Label layoutX="16.0" layoutY="279.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="Celular:" />
+            <TextField fx:id="jtfNome" layoutX="17.0" layoutY="39.0" prefHeight="29.0" prefWidth="503.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfRua" layoutX="16.0" layoutY="101.0" prefHeight="26.0" prefWidth="349.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfNumero" layoutX="377.0" layoutY="101.0" prefHeight="26.0" prefWidth="140.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfBairro" layoutX="17.0" layoutY="170.0" prefHeight="26.0" prefWidth="281.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfCidade" layoutX="321.0" layoutY="170.0" prefHeight="29.0" prefWidth="220.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfCep" layoutX="181.0" layoutY="240.0" prefHeight="29.0" prefWidth="117.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <ComboBox fx:id="jcbEstado" layoutX="17.0" layoutY="240.0" prefHeight="29.0" prefWidth="153.0" promptText="Selecione" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfTelefone" layoutX="328.0" layoutY="240.0" prefHeight="29.0" prefWidth="213.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <TextField fx:id="jtfCelular" layoutX="15.0" layoutY="304.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <Label layoutX="202.0" layoutY="279.0" style="-fx-font-size: 14pt; -fx-font-family: Tahoma;" text="E-mail:" />
+            <TextField fx:id="jtfEmail" layoutX="204.0" layoutY="304.0" prefHeight="29.0" prefWidth="339.0" style="-fx-font-size: 11pt; -fx-font-family: Tahoma;" />
+            <Button fx:id="btnSalvar" layoutX="363.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleSalvarFornecedor" prefHeight="32.0" prefWidth="78.0" text="Salvar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnNovo" layoutX="10.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleNovo" prefHeight="32.0" prefWidth="78.0" text="Novo">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnCancelar" layoutX="449.0" layoutY="358.0" mnemonicParsing="false" onAction="#handleCancelar" prefHeight="32.0" prefWidth="94.0" text="Cancelar">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

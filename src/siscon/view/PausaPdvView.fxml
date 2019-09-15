@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.input.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="110.0" prefWidth="699.0" style="-fx-background-color: rgb(66,166,161);" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="siscon.controller.PausaPdvController">
+   <children>
+      <MenuBar layoutX="606.0" prefHeight="29.0" prefWidth="90.0" style="-fx-background-color: rgb(66,166,161);">
+        <menus>
+          <Menu mnemonicParsing="false">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAbrirCaixa" text="Abrir Caixa">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F2" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+                  <MenuItem mnemonicParsing="false" onAction="#handleSair" text="sair">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="F6" control="ANY" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator>
+                  </MenuItem>
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <Label layoutX="14.0" layoutY="26.0" prefHeight="58.0" prefWidth="410.0" text="CAIXA FECHADO">
+         <font>
+            <Font size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="436.0" layoutY="44.0" text="F2: Abrir Caixa" textFill="#eeeded">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="582.0" layoutY="44.0" text="F6: Sair" textFill="#eeeded">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
